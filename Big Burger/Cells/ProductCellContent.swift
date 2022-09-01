@@ -59,7 +59,7 @@ class ProductCellContent: UIView {
 	/// Bind the datas and setup the view.
 	func setupView(_ product: Product?) {
 		self.productTitle.text = product?.title ?? "product_unknown_title".translate()
-		self.productPrice.text = product?.price == nil ? "product_unknown_price".translate() : "\(Int(product?.price ?? 0)) €"
+		self.productPrice.text = product?.price == nil ? "product_unknown_price".translate() : "\(product?.price.toPriceValue() ?? "0") €"
 		self.productDescription.text = product?.description ?? "product_unknown_description".translate()
 		
 		self.addSubview(self.productThumb)
