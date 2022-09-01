@@ -7,11 +7,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPresenter {
 	
 	// MARK: - Properties
 	
+	var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 	private var content: HomeView = HomeView()
+	
 	private var products: [Product]?
 	private var basket: Basket = Basket()
 	
@@ -37,6 +39,9 @@ class HomeViewController: UIViewController {
 	
 	// MARK: - Private
 	
+	/// Function that help us to route a specific action.
+	/// - Parameters:
+	///   - action: Action to perform.
 	private func process(_ action: HomeAction) {
 		switch action {
 		case .start:
@@ -53,25 +58,33 @@ class HomeViewController: UIViewController {
 	
 	/// Asynchronously fetch the products list and format the datas.
 	private func fetchProducts() async {
-		// TODO: - Show loader
+		self.showActivityIndicator()
 		
 		do {
 			try await HttpClient.shared.fetchDatas() { result in
 				switch result {
 				case .success(let data):
 					guard let products = data else {
-						// TODO: - Display missing data error
+						self.handleError(HttpErrors.missingData)
 						return
 					}
 					
 					self.reloadTableView(with: products)
 				case .failure(let error):
-					// TODO: - Display failure error
-					print(error)
+					self.handleError(error)
 				}
 			}
 		} catch {
-			// TODO: - Display failure error
+			self.handleError(nil)
+		}
+	}
+	
+	/// Something went wrong and app displays a message, the user can retry to fetch the datas.
+	/// - Parameters:
+	///   - error: Error thrown.
+	private func handleError(_ error: Error?) {
+		self.showError {
+			self.process(.start)
 		}
 	}
 	
@@ -79,7 +92,7 @@ class HomeViewController: UIViewController {
 	/// Handles and manage the datas that just been fetched.
 	private func reloadTableView(with products: [Product]) {
 		self.products = products
-		// TODO: - Hide loader
+		self.hideActivityIndicator()
 		
 		self.content.tableViewAction { tableView in
 			DispatchQueue.main.async {
