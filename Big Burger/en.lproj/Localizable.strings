@@ -5,3 +5,13 @@
   Created by emilien on 01/09/2022.
   
 */
+
+// MARK: - Home
+
+"home_title" = "Big Burger";
+
+// MARK: - Product
+
+"product_unknown_title" = "Unknown title";
+"product_unknown_price" = "Unknown trice";
+"product_unknown_description" = "Unknown description";
