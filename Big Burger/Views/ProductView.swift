@@ -77,7 +77,7 @@ class ProductView: UIView {
 	
 	/// Bind the datas and setup the view.
 	func setupView(_ product: Product?) {
-		self.backgroundColor = .white
+		self.backgroundColor = Appearance.backgroundColor
 		
 		self.productTitle.text = product?.title ?? "product_unknown_title".translate()
 		self.productPrice.text = product?.price == nil ? "product_unknown_price".translate() : "\(product?.price.toPriceValue() ?? "0") €"
@@ -109,8 +109,8 @@ class ProductView: UIView {
 			
 			self.addToCart.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
 			self.addToCart.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15),
-			self.addToCart.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
-			self.addToCart.heightAnchor.constraint(equalToConstant: 40)
+			self.addToCart.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+			self.addToCart.heightAnchor.constraint(equalToConstant: 50)
 		])
 	}
 	

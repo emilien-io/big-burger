@@ -17,6 +17,11 @@
 "product_unknown_description" = "Unknown description";
 "product_add_cart" = "Add to cart";
 
+// MARK: - Cart
+
+"cart_title" = "Cart";
+"cart_payment" = "Process to payment";
+
 // MARK: - Errors
 
 "error_title" = "Error";

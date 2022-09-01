@@ -57,9 +57,9 @@ class ProductCellContent: UIView {
 	// MARK: - Methods
 	
 	/// Bind the datas and setup the view.
-	func setupView(_ product: Product?) {
-		self.productTitle.text = product?.title ?? "product_unknown_title".translate()
-		self.productPrice.text = product?.price == nil ? "product_unknown_price".translate() : "\(product?.price.toPriceValue() ?? "0") €"
+	func setupView(_ product: Product?, _ number: Int? = nil) {
+		self.productTitle.text = self.getProductTitle(product, number)
+		self.productPrice.text = "\(self.getProductPrice(product, number)) €"
 		self.productDescription.text = product?.description ?? "product_unknown_description".translate()
 		
 		self.addSubview(self.productThumb)
@@ -89,6 +89,33 @@ class ProductCellContent: UIView {
 			self.productDescription.leftAnchor.constraint(equalTo: self.productThumb.rightAnchor, constant: 15),
 			self.productDescription.rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -10),
 		])
+	}
+	
+	// MARK: - Private
+	
+	private func getProductTitle(_ product: Product?, _ number: Int?) -> String {
+		if let product = product {
+			guard let number = number else {
+				return product.title
+			}
+
+			return "x\(number) - \(product.title)"
+		}
+		
+		return "product_unknown_title".translate()
+	}
+	
+	private func getProductPrice(_ product: Product?, _ number: Int?) -> String {
+		if let product = product {
+			guard let number = number else {
+				return product.price.toPriceValue()
+			}
+			
+			let total = product.price * number
+			return total.toPriceValue()
+		}
+		
+		return "product_unknown_price".translate()
 	}
 	
 	// MARK: - Product thumbnail handlers

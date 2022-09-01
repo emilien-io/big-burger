@@ -33,7 +33,39 @@ class CartViewController: UIViewController {
 		
 		self.content.setupView()
 		self.content.addConstraints()
+		
+		self.content.tableViewAction { tableView in
+			tableView.dataSource = self
+			tableView.delegate = self
+			tableView.reloadData()
+		}
+		
 		self.view = self.content
     }
     
+}
+
+// MARK: - UI Table View Delegates
+
+extension CartViewController: UITableViewDelegate, UITableViewDataSource {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		140
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.cart.products.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let datas = self.cart.products[indexPath.row]
+		let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
+		
+		cell.initializeCell(withProduct: datas.0, occurence: datas.1)
+		
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
 }

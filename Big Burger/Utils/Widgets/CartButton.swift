@@ -12,6 +12,7 @@ class CartButton: UIView {
 	
 	// MARK: - Properties
 	
+	private var completion: (() -> ())?
 	private var nbItems: Int = 0
 	
 	private let container: UIView = {
@@ -44,9 +45,10 @@ class CartButton: UIView {
 	
 	// MARK: - Initialization
 	
-	convenience init(superview: UIView) {
-		self.init(frame: CGRect(x: UIScreen.main.bounds.width - 100, y: UIScreen.main.bounds.height - 100, width: 70, height: 70))
-
+	convenience init(onTap completion: @escaping () -> ()) {
+		self.init(frame: CGRect(x: UIScreen.main.bounds.width - 90, y: UIScreen.main.bounds.height - 90, width: 70, height: 70))
+		
+		self.completion = completion
 		self.setupView()
 	}
 	
@@ -71,6 +73,9 @@ class CartButton: UIView {
 		self.container.addSubview(self.indicator)
 		
 		self.addSubview(self.container)
+		
+		let gesture = UITapGestureRecognizer(target: self, action: #selector(onTap))
+		self.addGestureRecognizer(gesture)
 	}
 	
 	// MARK: - Public
@@ -80,6 +85,16 @@ class CartButton: UIView {
 		
 		self.indicator.backgroundColor = .red
 		self.indicator.text = self.nbItems > 9 ? "9+" : "\(nbItems)"
+	}
+	
+	// MARK: - OBJC Methods
+	
+	@objc func onTap() {
+		guard let completion = self.completion else {
+			return
+		}
+		
+		completion()
 	}
 	
 }

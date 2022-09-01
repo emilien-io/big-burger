@@ -47,4 +47,18 @@ class MainCoordinator: CoordinatorProtocol {
 		currentVC.present(nav, animated: true)
 	}
 	
+	func showCart(_ cart: Cart) {
+		let nav = UINavigationController(rootViewController: CartViewController(with: cart))
+		nav.modalPresentationStyle = .pageSheet
+		if let sheet = nav.sheetPresentationController {
+			sheet.detents = [.large()]
+		}
+		
+		guard let currentVC = self.navigationController.viewControllers.last else {
+			fatalError("[Main Coordinator - `showCart()`] Failed to get last view controller in navigation.")
+		}
+		
+		currentVC.present(nav, animated: true)
+	}
+	
 }

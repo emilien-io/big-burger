@@ -22,6 +22,8 @@ protocol CoordinatorProtocol {
 	func start()
 	
 	/// Show the details of an ad.
-	/// TODO: - Map & pass burger object.
 	func showDetails(for product: Product, with completion: @escaping (Product) -> ())
+	
+	/// Show the cart.
+	func showCart(_ cart: Cart)
 }

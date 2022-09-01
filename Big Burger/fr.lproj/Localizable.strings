@@ -17,6 +17,11 @@
 "product_unknown_description" = "Description inconnue";
 "product_add_cart" = "Ajouter au panier";
 
+// MARK: - Cart
+
+"cart_title" = "Panier";
+"cart_payment" = "Procéder au paiement";
+
 // MARK: - Errors
 
 "error_title" = "Erreur";

@@ -40,7 +40,10 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 		
 		self.title = "home_title".translate()
 		
-		self.content.setupView()
+		self.content.setupView(onCartButtonTap: {
+			self.process(.showBasket)
+		})
+		
 		self.content.tableViewAction { tableView in
 			tableView.delegate = self
 			tableView.dataSource = self
@@ -67,6 +70,7 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 			self.displayProductDetails(product)
 			break
 		case .showBasket:
+			self.displayCart()
 			break
 		}
 	}
@@ -126,6 +130,17 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 		coordinator.showDetails(for: product) { productToAdd in
 			self.cart.add(productToAdd)
 			self.content.updateCart()
+		}
+	}
+	
+	/// Uses the main coordinator to display cart.
+	private func displayCart() {
+		guard let coordinator = self.coordinator else {
+			return
+		}
+		
+		if !self.cart.isEmpty {
+			coordinator.showCart(self.cart)
 		}
 	}
 

@@ -11,6 +11,10 @@ class Cart {
 	/// Array of tupples that represent the product and the number of that product in cart.
 	var products: [(Product, Int)] = []
 	
+	var isEmpty: Bool {
+		self.products.isEmpty
+	}
+	
 	// MARK: - Public
 	
 	func add(_ product: Product) {

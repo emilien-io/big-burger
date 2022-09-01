@@ -18,7 +18,7 @@ class HomeView: UIView {
 	// MARK: - Setup
 	
 	/// Bind the datas and setup the view.
-	func setupView() {
+	func setupView(onCartButtonTap completion: @escaping () -> ()) {
 		self.backgroundColor = Appearance.backgroundColor
 		
 		// Table view setup
@@ -30,7 +30,7 @@ class HomeView: UIView {
 		self.addSubview(self.tableView!)
 		
 		// Cart button
-		self.cartButton = CartButton(superview: self)
+		self.cartButton = CartButton(onTap: completion)
 		
 		self.addSubview(self.cartButton!)
 	}
@@ -52,4 +52,5 @@ class HomeView: UIView {
 		
 		cartButton.increase()
 	}
+	
 }

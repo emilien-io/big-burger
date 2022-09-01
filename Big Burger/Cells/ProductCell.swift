@@ -28,11 +28,11 @@ class ProductCell: UITableViewCell {
 	/// Initialize a `ProductCell` cell.
 	/// - Parameters:
 	///   - product: Product data.
-	func initializeCell(withProduct product: Product?) {
+	func initializeCell(withProduct product: Product?, occurence number: Int? = nil) {
 		self.backgroundColor = Appearance.backgroundColor
 		self.addSubview(self.content)
 		
-		self.content.setupView(product)
+		self.content.setupView(product, number)
 		self.content.addConstraints()
 		
 		self.getProductPicture(for: product)
