@@ -11,7 +11,7 @@ The app display a list of products and allow the user to see the details on tap.
 
 > MVC is a software development pattern made up of three main objects:
 >
-> As shown above, the MVVM pattern consists of three layers:
+> The MVC pattern consists of three layers:
 >
 >  - The _Model_ is where your data resides. Things like persistence, model objects, parsers, managers, and networking code live there.
 >  - The _View_ layer is the face of your app. Its classes are often reusable as they don’t contain any domain-specific logic. For example, a `UILabel` is a view that presents text on the screen, and it’s reusable and extensible.
