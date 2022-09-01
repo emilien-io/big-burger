@@ -11,7 +11,6 @@
 		EB60FDE728C0A29E00B8F6EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FDE628C0A29E00B8F6EF /* SceneDelegate.swift */; };
 		EB60FDE928C0A29E00B8F6EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FDE828C0A29E00B8F6EF /* HomeViewController.swift */; };
 		EB60FDEE28C0A29F00B8F6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB60FDED28C0A29F00B8F6EF /* Assets.xcassets */; };
-		EB60FDFC28C0A2A000B8F6EF /* Big_BurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FDFB28C0A2A000B8F6EF /* Big_BurgerTests.swift */; };
 		EB60FE0628C0A2A000B8F6EF /* Big_BurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE0528C0A2A000B8F6EF /* Big_BurgerUITests.swift */; };
 		EB60FE0828C0A2A000B8F6EF /* Big_BurgerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE0728C0A2A000B8F6EF /* Big_BurgerUITestsLaunchTests.swift */; };
 		EB60FE1A28C0A30200B8F6EF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE1928C0A30200B8F6EF /* MainCoordinator.swift */; };
@@ -36,6 +35,10 @@
 		EB60FE4E28C0C52200B8F6EF /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */; };
 		EB60FE5028C0C71400B8F6EF /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4F28C0C71400B8F6EF /* ProductView.swift */; };
 		EB60FE5228C0CF2000B8F6EF /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE5128C0CF2000B8F6EF /* Int.swift */; };
+		EB60FE5428C0D4BE00B8F6EF /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE5328C0D4BE00B8F6EF /* HomeViewControllerTests.swift */; };
+		EB60FE5628C0D53700B8F6EF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE5528C0D53700B8F6EF /* CartViewController.swift */; };
+		EB60FE5828C0D5A500B8F6EF /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE5728C0D5A500B8F6EF /* CartView.swift */; };
+		EB60FE5A28C0D77300B8F6EF /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE5928C0D77300B8F6EF /* CartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,6 @@
 		EB60FDED28C0A29F00B8F6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB60FDF228C0A29F00B8F6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB60FDF728C0A2A000B8F6EF /* Big BurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big BurgerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB60FDFB28C0A2A000B8F6EF /* Big_BurgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big_BurgerTests.swift; sourceTree = "<group>"; };
 		EB60FE0128C0A2A000B8F6EF /* Big BurgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big BurgerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB60FE0528C0A2A000B8F6EF /* Big_BurgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big_BurgerUITests.swift; sourceTree = "<group>"; };
 		EB60FE0728C0A2A000B8F6EF /* Big_BurgerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big_BurgerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		EB60FE4F28C0C71400B8F6EF /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		EB60FE5128C0CF2000B8F6EF /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		EB60FE5328C0D4BE00B8F6EF /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		EB60FE5528C0D53700B8F6EF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		EB60FE5728C0D5A500B8F6EF /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		EB60FE5928C0D77300B8F6EF /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +167,7 @@
 		EB60FDFA28C0A2A000B8F6EF /* Big BurgerTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB60FDFB28C0A2A000B8F6EF /* Big_BurgerTests.swift */,
+				EB60FE5328C0D4BE00B8F6EF /* HomeViewControllerTests.swift */,
 			);
 			path = "Big BurgerTests";
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			children = (
 				EB60FDE828C0A29E00B8F6EF /* HomeViewController.swift */,
 				EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */,
+				EB60FE5528C0D53700B8F6EF /* CartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 			children = (
 				EB60FE3328C0AB1A00B8F6EF /* HomeView.swift */,
 				EB60FE4F28C0C71400B8F6EF /* ProductView.swift */,
+				EB60FE5728C0D5A500B8F6EF /* CartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 		EB60FE4128C0AFE100B8F6EF /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				EB60FE5928C0D77300B8F6EF /* CartButton.swift */,
 				EB60FE4228C0AFF100B8F6EF /* PaddingLabel.swift */,
 			);
 			path = Widgets;
@@ -412,6 +421,7 @@
 				EB60FE4C28C0C1A100B8F6EF /* ErrorPresenter.swift in Sources */,
 				EB60FE3928C0AE6900B8F6EF /* String.swift in Sources */,
 				EB60FE4E28C0C52200B8F6EF /* ProductViewController.swift in Sources */,
+				EB60FE5628C0D53700B8F6EF /* CartViewController.swift in Sources */,
 				EB60FE4A28C0C18300B8F6EF /* ActivityIndicatorPresenter.swift in Sources */,
 				EB60FDE928C0A29E00B8F6EF /* HomeViewController.swift in Sources */,
 				EB60FE2128C0A5C800B8F6EF /* Appearance.swift in Sources */,
@@ -422,11 +432,13 @@
 				EB60FE1C28C0A30F00B8F6EF /* CoordinatorProtocol.swift in Sources */,
 				EB60FE3628C0AC5400B8F6EF /* ProductCell.swift in Sources */,
 				EB60FE3428C0AB1A00B8F6EF /* HomeView.swift in Sources */,
+				EB60FE5A28C0D77300B8F6EF /* CartButton.swift in Sources */,
 				EB60FE4328C0AFF100B8F6EF /* PaddingLabel.swift in Sources */,
 				EB60FE2C28C0A90600B8F6EF /* HttpClient.swift in Sources */,
 				EB60FDE528C0A29E00B8F6EF /* AppDelegate.swift in Sources */,
 				EB60FE3228C0AA9400B8F6EF /* Product.swift in Sources */,
 				EB60FE5228C0CF2000B8F6EF /* Int.swift in Sources */,
+				EB60FE5828C0D5A500B8F6EF /* CartView.swift in Sources */,
 				EB60FE5028C0C71400B8F6EF /* ProductView.swift in Sources */,
 				EB60FE4728C0B82300B8F6EF /* Cart.swift in Sources */,
 				EB60FDE728C0A29E00B8F6EF /* SceneDelegate.swift in Sources */,
@@ -438,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB60FDFC28C0A2A000B8F6EF /* Big_BurgerTests.swift in Sources */,
+				EB60FE5428C0D4BE00B8F6EF /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

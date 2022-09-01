@@ -13,6 +13,7 @@ class HomeView: UIView {
 	// MARK: - UI Elements
 	
 	private var tableView: UITableView?
+	private var cartButton: CartButton?
 	
 	// MARK: - Setup
 	
@@ -27,6 +28,11 @@ class HomeView: UIView {
 		self.tableView?.register(ProductCell.self, forCellReuseIdentifier: "ProductCell")
 		
 		self.addSubview(self.tableView!)
+		
+		// Cart button
+		self.cartButton = CartButton(superview: self)
+		
+		self.addSubview(self.cartButton!)
 	}
 	
 	/// Allows us to bind the datasource and the delegate of the table view.
@@ -36,5 +42,14 @@ class HomeView: UIView {
 		}
 		
 		completion(tableView)
+	}
+	
+	/// Increasing count of products in cart
+	func updateCart() {
+		guard let cartButton = self.cartButton else {
+			return
+		}
+		
+		cartButton.increase()
 	}
 }

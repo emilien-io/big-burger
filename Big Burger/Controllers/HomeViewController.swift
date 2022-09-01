@@ -63,7 +63,8 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 				await self.fetchProducts()
 				self.datasTask = nil
 			}
-		case .showDetails(let _):
+		case .showDetails(let product):
+			self.displayProductDetails(product)
 			break
 		case .showBasket:
 			break
@@ -102,7 +103,6 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 		}
 	}
 	
-	
 	/// Handles and manage the datas that just been fetched.
 	private func reloadTableView(with products: [Product]) {
 		self.products = products
@@ -112,6 +112,20 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 			DispatchQueue.main.async {
 				tableView.reloadData()
 			}
+		}
+	}
+	
+	/// Uses the main coordinator to display the product details.
+	/// - Parameters:
+	///   - product: Product to display.
+	private func displayProductDetails(_ product: Product) {
+		guard let coordinator = self.coordinator else {
+			return
+		}
+		
+		coordinator.showDetails(for: product) { productToAdd in
+			self.cart.add(productToAdd)
+			self.content.updateCart()
 		}
 	}
 
@@ -144,12 +158,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 
-		guard let coordinator = self.coordinator, let product = self.products?[indexPath.row] else {
+		guard let product = self.products?[indexPath.row] else {
 			return
 		}
 
-		coordinator.showDetails(for: product) { productToAdd in
-			self.cart.add(productToAdd)
-		}
+		self.process(.showDetails(product))
 	}
 }

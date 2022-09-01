@@ -135,7 +135,7 @@ class ProductView: UIView {
 		self.productThumb.tintColor = .white
 	}
 	
-	// MARK: - OBJC Methods
+	// MARK: - OBJC Methodsi
 	
 	@objc func addToCartTapped() {
 		self.delegate?.addToCart()
