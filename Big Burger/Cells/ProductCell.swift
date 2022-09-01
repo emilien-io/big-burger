@@ -35,13 +35,13 @@ class ProductCell: UITableViewCell {
 		self.content.setupView(product)
 		self.content.addConstraints()
 		
-		self.getAdPicture(for: product)
+		self.getProductPicture(for: product)
 	}
 	
 	// MARK: - Private
 	
 	/// Asynchronously fetch product picture.
-	private func getAdPicture(for product: Product?) {
+	private func getProductPicture(for product: Product?) {
 		guard let url = URL(string: product?.thumbnail ?? "") else {
 			self.content.setPlaceholderAsProductThumbnail()
 			return

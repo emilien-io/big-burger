@@ -15,6 +15,7 @@
 "product_unknown_title" = "Titre inconnu";
 "product_unknown_price" = "Prix inconnu";
 "product_unknown_description" = "Description inconnue";
+"product_add_cart" = "Ajouter au panier";
 
 // MARK: - Errors
 

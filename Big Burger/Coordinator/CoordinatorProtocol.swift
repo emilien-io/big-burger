@@ -23,5 +23,5 @@ protocol CoordinatorProtocol {
 	
 	/// Show the details of an ad.
 	/// TODO: - Map & pass burger object.
-	func showBurgerDetails()
+	func showDetails(for product: Product)
 }

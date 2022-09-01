@@ -15,6 +15,7 @@
 "product_unknown_title" = "Unknown title";
 "product_unknown_price" = "Unknown trice";
 "product_unknown_description" = "Unknown description";
+"product_add_cart" = "Add to cart";
 
 // MARK: - Errors
 

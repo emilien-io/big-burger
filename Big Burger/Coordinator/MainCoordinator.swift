@@ -24,7 +24,7 @@ class MainCoordinator: CoordinatorProtocol {
 	// MARK: - Public
 	
 	func start() {
-		self.initialViewController = HomeViewController()
+		self.initialViewController = HomeViewController(with: self)
 		
 		guard let initialVC = initialViewController else {
 			fatalError("[Main Coordinator - `start()`] Failed to set initial view controller.")
@@ -33,6 +33,18 @@ class MainCoordinator: CoordinatorProtocol {
 		self.navigationController.viewControllers = [initialVC]
 	}
 	
-	func showBurgerDetails() {}
+	func showDetails(for product: Product) {
+		let nav = UINavigationController(rootViewController: ProductViewController(with: product))
+		nav.modalPresentationStyle = .pageSheet
+		if let sheet = nav.sheetPresentationController {
+			sheet.detents = [.medium()]
+		}
+		
+		guard let currentVC = self.navigationController.viewControllers.last else {
+			fatalError("[Main Coordinator - `showDetails()`] Failed to get last view controller in navigation.")
+		}
+		
+		currentVC.present(nav, animated: true)
+	}
 	
 }

@@ -33,6 +33,8 @@
 		EB60FE4728C0B82300B8F6EF /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4628C0B82300B8F6EF /* Basket.swift */; };
 		EB60FE4A28C0C18300B8F6EF /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4928C0C18300B8F6EF /* ActivityIndicatorPresenter.swift */; };
 		EB60FE4C28C0C1A100B8F6EF /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4B28C0C1A100B8F6EF /* ErrorPresenter.swift */; };
+		EB60FE4E28C0C52200B8F6EF /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */; };
+		EB60FE5028C0C71400B8F6EF /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4F28C0C71400B8F6EF /* ProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		EB60FE4628C0B82300B8F6EF /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		EB60FE4928C0C18300B8F6EF /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		EB60FE4B28C0C1A100B8F6EF /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		EB60FE4F28C0C71400B8F6EF /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				EB60FDE828C0A29E00B8F6EF /* HomeViewController.swift */,
+				EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				EB60FE3328C0AB1A00B8F6EF /* HomeView.swift */,
+				EB60FE4F28C0C71400B8F6EF /* ProductView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				EB60FE2E28C0A90F00B8F6EF /* HttpErrors.swift in Sources */,
 				EB60FE4C28C0C1A100B8F6EF /* ErrorPresenter.swift in Sources */,
 				EB60FE3928C0AE6900B8F6EF /* String.swift in Sources */,
+				EB60FE4E28C0C52200B8F6EF /* ProductViewController.swift in Sources */,
 				EB60FE4A28C0C18300B8F6EF /* ActivityIndicatorPresenter.swift in Sources */,
 				EB60FDE928C0A29E00B8F6EF /* HomeViewController.swift in Sources */,
 				EB60FE2128C0A5C800B8F6EF /* Appearance.swift in Sources */,
@@ -416,6 +423,7 @@
 				EB60FE2C28C0A90600B8F6EF /* HttpClient.swift in Sources */,
 				EB60FDE528C0A29E00B8F6EF /* AppDelegate.swift in Sources */,
 				EB60FE3228C0AA9400B8F6EF /* Product.swift in Sources */,
+				EB60FE5028C0C71400B8F6EF /* ProductView.swift in Sources */,
 				EB60FE4728C0B82300B8F6EF /* Basket.swift in Sources */,
 				EB60FDE728C0A29E00B8F6EF /* SceneDelegate.swift in Sources */,
 				EB60FE3028C0A91D00B8F6EF /* Constants.swift in Sources */,
@@ -592,6 +600,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Big Burger/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,6 +628,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Big Burger/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
