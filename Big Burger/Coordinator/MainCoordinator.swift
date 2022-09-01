@@ -33,8 +33,8 @@ class MainCoordinator: CoordinatorProtocol {
 		self.navigationController.viewControllers = [initialVC]
 	}
 	
-	func showDetails(for product: Product) {
-		let nav = UINavigationController(rootViewController: ProductViewController(with: product))
+	func showDetails(for product: Product, with completion: @escaping (Product) -> ()) {
+		let nav = UINavigationController(rootViewController: ProductViewController(for: product, with: completion))
 		nav.modalPresentationStyle = .pageSheet
 		if let sheet = nav.sheetPresentationController {
 			sheet.detents = [.medium()]

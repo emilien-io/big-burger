@@ -12,12 +12,14 @@ class ProductViewController: UIViewController {
 	// MARK: - Properties
 	
 	private var content: ProductView = ProductView()
+	private var onAddCompletion: ((Product) -> Void)
 	private let product: Product
 	
 	// MARK: - Initialization
 	
-	init(with product: Product) {
+	init(for product: Product, with completion: @escaping (Product) -> ()) {
 		self.product = product
+		self.onAddCompletion = completion
 		
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -67,6 +69,8 @@ class ProductViewController: UIViewController {
 
 extension ProductViewController: ProductViewDelegate {
 	func addToCart() {
-		//TODO: - Add product to cart
+		self.dismiss(animated: true) {
+			self.onAddCompletion(self.product)
+		}
 	}
 }

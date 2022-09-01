@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, ActivityIndicatorPresenter, ErrorPre
 	private var content: HomeView = HomeView()
 	
 	private var products: [Product]?
-	private var basket: Basket = Basket()
+	private var cart: Cart = Cart()
 	
 	private var datasTask: Task<Void, Never>?
 	
@@ -148,6 +148,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 			return
 		}
 
-		coordinator.showDetails(for: product)
+		coordinator.showDetails(for: product) { productToAdd in
+			self.cart.add(productToAdd)
+		}
 	}
 }

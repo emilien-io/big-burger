@@ -30,7 +30,7 @@
 		EB60FE4028C0AFA700B8F6EF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE3F28C0AFA700B8F6EF /* UIColor.swift */; };
 		EB60FE4328C0AFF100B8F6EF /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4228C0AFF100B8F6EF /* PaddingLabel.swift */; };
 		EB60FE4528C0B7AF00B8F6EF /* HomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4428C0B7AF00B8F6EF /* HomeAction.swift */; };
-		EB60FE4728C0B82300B8F6EF /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4628C0B82300B8F6EF /* Basket.swift */; };
+		EB60FE4728C0B82300B8F6EF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4628C0B82300B8F6EF /* Cart.swift */; };
 		EB60FE4A28C0C18300B8F6EF /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4928C0C18300B8F6EF /* ActivityIndicatorPresenter.swift */; };
 		EB60FE4C28C0C1A100B8F6EF /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4B28C0C1A100B8F6EF /* ErrorPresenter.swift */; };
 		EB60FE4E28C0C52200B8F6EF /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */; };
@@ -84,7 +84,7 @@
 		EB60FE3F28C0AFA700B8F6EF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EB60FE4228C0AFF100B8F6EF /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		EB60FE4428C0B7AF00B8F6EF /* HomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAction.swift; sourceTree = "<group>"; };
-		EB60FE4628C0B82300B8F6EF /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		EB60FE4628C0B82300B8F6EF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		EB60FE4928C0C18300B8F6EF /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		EB60FE4B28C0C1A100B8F6EF /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		EB60FE4D28C0C52200B8F6EF /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				EB60FE3128C0AA9400B8F6EF /* Product.swift */,
-				EB60FE4628C0B82300B8F6EF /* Basket.swift */,
+				EB60FE4628C0B82300B8F6EF /* Cart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -428,7 +428,7 @@
 				EB60FE3228C0AA9400B8F6EF /* Product.swift in Sources */,
 				EB60FE5228C0CF2000B8F6EF /* Int.swift in Sources */,
 				EB60FE5028C0C71400B8F6EF /* ProductView.swift in Sources */,
-				EB60FE4728C0B82300B8F6EF /* Basket.swift in Sources */,
+				EB60FE4728C0B82300B8F6EF /* Cart.swift in Sources */,
 				EB60FDE728C0A29E00B8F6EF /* SceneDelegate.swift in Sources */,
 				EB60FE3028C0A91D00B8F6EF /* Constants.swift in Sources */,
 			);
