@@ -29,7 +29,7 @@ Since MVC design pattern did a great job with splitting logic of the controller 
 - No .xib or .storyboard has been used
 - It has no external library
 - Is universal with iPhone / iPad
-- Compatible iOS 14+
+- Compatible iOS 15+
 
 # Few references
 
