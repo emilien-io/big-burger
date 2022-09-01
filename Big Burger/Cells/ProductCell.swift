@@ -12,7 +12,6 @@ class ProductCell: UITableViewCell {
 	// MARK: - Properties
 	
 	private var content: ProductCellContent = ProductCellContent()
-	var product: Product?
 	
 	// MARK: - Overriden Methods
 
@@ -31,18 +30,19 @@ class ProductCell: UITableViewCell {
 	///   - product: Product data.
 	func initializeCell(withProduct product: Product?) {
 		self.backgroundColor = Appearance.backgroundColor
-		
 		self.addSubview(self.content)
 		
 		self.content.setupView(product)
 		self.content.addConstraints()
+		
+		self.getAdPicture(for: product)
 	}
 	
 	// MARK: - Private
 	
 	/// Asynchronously fetch product picture.
-	private func getAdPicture() {
-		guard let url = URL(string: self.product?.thumbnail ?? "") else {
+	private func getAdPicture(for product: Product?) {
+		guard let url = URL(string: product?.thumbnail ?? "") else {
 			self.content.setPlaceholderAsProductThumbnail()
 			return
 		}

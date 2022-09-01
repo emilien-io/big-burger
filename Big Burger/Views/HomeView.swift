@@ -30,7 +30,7 @@ class HomeView: UIView {
 	}
 	
 	/// Allows us to bind the datasource and the delegate of the table view.
-	func bindTableView(_ completion: @escaping (UITableView) -> Void) {
+	func tableViewAction(_ completion: @escaping (UITableView) -> Void) {
 		guard let tableView = self.tableView else {
 			fatalError("[Home View - `bindTableView()`] Failed to initialize table view.")
 		}

@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
 		self.title = "home_title".translate()
 		
 		self.content.setupView()
-		self.content.bindTableView { tableView in
+		self.content.tableViewAction { tableView in
 			tableView.delegate = self
 			tableView.dataSource = self
 		}
@@ -64,11 +64,7 @@ class HomeViewController: UIViewController {
 						return
 					}
 					
-					dump(products)
-					
-					self.products = products
-					// TODO: - Hide loader
-					
+					self.reloadTableView(with: products)
 				case .failure(let error):
 					// TODO: - Display failure error
 					print(error)
@@ -78,6 +74,19 @@ class HomeViewController: UIViewController {
 			// TODO: - Display failure error
 		}
 	}
+	
+	
+	/// Handles and manage the datas that just been fetched.
+	private func reloadTableView(with products: [Product]) {
+		self.products = products
+		// TODO: - Hide loader
+		
+		self.content.tableViewAction { tableView in
+			DispatchQueue.main.async {
+				tableView.reloadData()
+			}
+		}
+	}
 
 }
 
@@ -85,7 +94,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		160
+		140
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

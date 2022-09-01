@@ -70,22 +70,24 @@ class ProductCellContent: UIView {
 	
 	/// Setup the layout by adding constraints.
 	func addConstraints() {
-		self.productThumb.frame = CGRect(x: 10, y: 10, width: 150, height: 140)
+		guard let superview = self.superview else {
+			fatalError("[Product Cell Content] Failed to get superview.")
+		}
+		
+		self.productThumb.frame = CGRect(x: 10, y: 10, width: 150, height: 120)
 		
 		NSLayoutConstraint.activate([
 			self.productTitle.topAnchor.constraint(equalTo: self.productThumb.topAnchor),
 			self.productTitle.leftAnchor.constraint(equalTo: self.productThumb.rightAnchor, constant: 15),
-			self.productTitle.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+			self.productTitle.rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -10),
 			self.productTitle.heightAnchor.constraint(equalToConstant: 40),
-			
+
 			self.productPrice.bottomAnchor.constraint(equalTo: self.productThumb.bottomAnchor, constant: -10),
 			self.productPrice.rightAnchor.constraint(equalTo: self.productThumb.rightAnchor, constant: -10),
-		])
-		
-		NSLayoutConstraint.activate([
+			
 			self.productDescription.topAnchor.constraint(equalTo: self.productTitle.bottomAnchor),
 			self.productDescription.leftAnchor.constraint(equalTo: self.productThumb.rightAnchor, constant: 15),
-			self.productDescription.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+			self.productDescription.rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -10),
 		])
 	}
 	
